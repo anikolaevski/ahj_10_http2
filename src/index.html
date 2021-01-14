@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Example</h1>
+
+  <form id="enterform" class = "enterform">
+
+    <label for="entercard">Name:</label>
+    <input id="fld_name" name = "name" type = "text" size = 30 value = "">
+
+    <label for="entercard">Description:</label>
+    <input id="fld_description" name = "description" type = "text" size = 50 value = "">
+
+    <button id="enterbutton" type="submit">Создать</button>
+
+    <div id="entercardState" class = "invisible"></div>
+  </form>
+
+  <table class="list-table">
+    <thead>
+      <tr>
+        <th>NN</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Created</th>
+      </tr>
+    </thead>
+    <tbody id="list_tbody"></tbody>
+  </table>
+  <script src="js/app.js"></script>
+ </body>
+</html>
