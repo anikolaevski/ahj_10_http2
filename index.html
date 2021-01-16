@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="favicon.ico"><link href="main.css" rel="stylesheet"></head>
+<body>
+  <div class="xampl-form">
+    <h2>Example</h2>
+    <form id="enterform" class = "enterform">
+      <label for="entercard">Name:</label>
+      <input id="fld_name" name = "name" type = "text" size = 30 value = "">
+      <label for="entercard">Description:</label>
+      <input id="fld_description" name = "description" type = "text" size = 50 value = "">
+      <button id="enterbutton" type="submit">Создать</button>
+      <div id="entercardState" class = "invisible"></div>
+    </form>
+    <table class="list-table">
+      <thead>
+        <tr>
+          <th>NN</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody id="list_tbody"></tbody>
+    </table>    
+  </div>
+
+  <div class="main-form">
+    <h2>Система учета тикетов</h2>
+    <button id="new-ticket-button" class="main-butt">Добавить тикет</button>
+    <table class="list-table">
+      <tbody id="list_tbody2"></tbody>
+    </table>
+  </div>
+
+  <table id="table-template" class="table-template">
+    <tbody>
+      <tr class="rec-template">
+        <td class="rec-item rec-status"><div class="statis-wid"></div></td>
+        <td class="rec-item rec-shortname"></td>
+        <td class="rec-item rec-created"></td>
+        <td class="rec-item rec-edit-control"><div class="statis-wid edit-sign"></div></td>
+        <td class="rec-item rec-delete-control"><div class="statis-wid delete-sign"></div></td>
+      </tr> 
+    </tbody>
+  </table>
+
+  <div id="edit-popup-template" class="edit-popup-template nodisp">
+    <div class="popup-header"></div>
+    <form id="edit-popup-form" class="edit-popup-form">
+      <table class="edit-popup-form-tab">
+        <tbody>
+          <tr>
+            <td class="edit-form-cell"><label for="entercard">Заголовок:</label></td>
+            <td class="edit-form-cell"><input id="popup_fld_name" name="name" type="text" size=50 value=""></td>
+          </tr>
+          <tr>
+            <td class="edit-form-cell"><label for="entercard">Описание:</label></td>
+            <td class="edit-form-cell"><textarea id="popup_fld_description" name="description" cols=50 rows=5 value=""></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="edit-form-buttons">
+              <button class="popup-button" id="popup_enterbutton" type="submit">Ok</button>
+              <button class="popup-button" id="popup_cancelbutton">Отмена</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="entercardState" class = "invisible"></div>
+    </form>
+  </div>
+
+  <div id="delete-popup-template" class="delete-popup-template nodisp">
+    <div class="popup-header">Удаление тикета</div>
+    <table class="edit-popup-form-tab">
+      <tbody>
+        <tr>
+          <td class="edit-form-cell">
+            <p>Вы уверены, что хотите удалить этот тикет 
+              <span id="delete-ticket-text"></span>?</p>
+            <p>Это действие необратимо.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="edit-form-buttons">
+            <button class="popup-button" id="popup_deletebutton" type="submit">Ok</button>
+            <button class="popup-button" id="popup_delcancelbutton">Отмена</button> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+
+  <script src="js/app.js"></script>
+ <script type="text/javascript" src="main.js"></script></body>
+</html>
